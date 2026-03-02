@@ -12,7 +12,7 @@ export const SafeAreaViewFlex = ({
   [key: string]: any;
 }) => {
   return (
-    <SafeAreaView style={[styles.flex, style]} edges={[]} {...props}>
+    <SafeAreaView style={[styles.flex, style]} edges={['bottom']} {...props}>
       {children}
     </SafeAreaView>
   );
