@@ -13,6 +13,7 @@ export const WebWidget = ({ text = '', additionalProps, widgetStyle }: WidgetPro
     navigation.navigate(ScreenName.Web, {
       inModalBrowser: additionalProps?.inModalBrowser,
       isExternal: additionalProps?.isExternal,
+      isIncognito: additionalProps?.isIncognito,
       title: additionalProps?.staticContentTitle,
       webUrl: additionalProps?.webUrl
     });
