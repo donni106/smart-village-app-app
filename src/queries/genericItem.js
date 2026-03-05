@@ -28,6 +28,7 @@ export const GET_GENERIC_ITEMS = gql`
       genericType
       title
       externalId
+      visible
       categories {
         id
         name
