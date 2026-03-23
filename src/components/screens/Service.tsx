@@ -147,7 +147,7 @@ export const Service = ({
           </WrapperWrap>
         );
       })}
-      {!!tiles?.length && toggler}
+      {toggler}
     </>
   );
 };
