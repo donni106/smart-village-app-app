@@ -339,7 +339,10 @@ export const WasteCollectionScreen = ({ navigation }) => {
                   )}
 
                   {!!usedTypes && (
-                    <WasteCalendarLegend data={usedTypes} dots={markedDates?.[selectedDay]?.dots} />
+                    <WasteCalendarLegend
+                      data={usedTypes}
+                      selectedDay={markedDates?.[selectedDay]}
+                    />
                   )}
 
                   <Button title={texts.close} onPress={() => setIsDayOverlayVisible(false)} />
