@@ -108,8 +108,7 @@ export const WasteCollectionScreen = ({ navigation }) => {
   const [selectedTypes, setSelectedTypes] = useState();
   const markedDates = useWasteMarkedDates({
     streetData,
-    selectedTypes: selectedTypes || typesData,
-    showCalendar
+    selectedTypes: selectedTypes || typesData
   });
   const keyboardHeight = useKeyboardHeight();
   const [isReset, setIsReset] = useState(false);

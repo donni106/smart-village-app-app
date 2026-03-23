@@ -109,15 +109,20 @@ export const useWasteMarkedDates = ({ streetData, selectedTypes }) =>
 
         const { color, selected_color: selectedColor } = selectedTypes[wasteLocationType.wasteType];
         wasteLocationType?.pickUpTimes?.forEach((date) => {
-          const currentDots = dates[date?.pickupDate]?.dots ?? [];
+          const pickupDate = date?.pickupDate;
+          if (!pickupDate) {
+            return;
+          }
 
-          // Check if a dot with this color already exists
-          const colorExists = currentDots.some((dot) => dot.color === color);
+          const previousEntry = dates[pickupDate] ?? { marked: true, note: null, dots: [] };
+          const colorExists = previousEntry.dots.some((dot) => dot.color === color);
+          const nextDots = colorExists ? previousEntry.dots : [...previousEntry.dots, { color, selectedColor }];
+          const nextNote = previousEntry.note ?? (typeof date.note === 'string' ? date.note : null);
 
-          dates[date?.pickupDate] = {
+          dates[pickupDate] = {
             marked: true,
-            note: typeof date.note === 'string' ? date.note : null,
-            dots: colorExists ? currentDots : [...currentDots, { color, selectedColor }]
+            note: nextNote,
+            dots: nextDots
           };
         });
       });
