@@ -17,6 +17,7 @@ import DrawerNavigatorItems from './DrawerNavigatorItems';
 export const CustomDrawerContentComponent = ({ navigation, drawerRoutes, state }) => {
   const { orientation } = useContext(OrientationContext);
   const a11yText = consts.a11yLabel;
+
   return (
     <DiagonalGradient>
       <SafeAreaViewFlex>
@@ -49,10 +50,7 @@ const stylesWithProps = ({ orientation }) => {
       alignItems: 'flex-end',
       flexDirection: 'row',
       justifyContent: 'flex-end',
-      height: Platform.select({
-        android: getHeaderHeight(orientation) + statusBarHeight(orientation),
-        ios: undefined
-      })
+      height: getHeaderHeight(orientation) + statusBarHeight(orientation)
     },
     icon: {
       paddingHorizontal: 24,
