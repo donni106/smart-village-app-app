@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "react-native-best-practices": {
+      "source": "software-mansion-labs/skills",
+      "sourceType": "github",
+      "computedHash": "3324872a2b2993ee1e247697934547a19377fa9dcd1dd72e735bbbf08a3e6193"
+    }
+  }
+}
