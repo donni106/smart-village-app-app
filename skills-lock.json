@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "native-data-fetching": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "computedHash": "3cd0ba91f359f9f84cd40f36f356287994a0e952520fac6e03ef7952d0397879"
+    },
     "react-native-best-practices": {
       "source": "software-mansion-labs/skills",
       "sourceType": "github",
