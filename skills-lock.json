@@ -10,6 +10,11 @@
       "source": "software-mansion-labs/skills",
       "sourceType": "github",
       "computedHash": "3324872a2b2993ee1e247697934547a19377fa9dcd1dd72e735bbbf08a3e6193"
+    },
+    "react-native-best-practices-callstack": {
+      "source": "/Users/daniel/Development/smart-village-app/vendor/agent-skills/react-native-best-practices-callstack",
+      "sourceType": "local",
+      "computedHash": "57297c0ef4b963b2bc696c3159d4268337fff0ea38d0962ae7168e893852ca9f"
     }
   }
 }
